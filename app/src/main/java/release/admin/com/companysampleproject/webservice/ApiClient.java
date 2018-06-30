@@ -10,8 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class ApiClient {
 
-    //public static final String BASE_URL = "http://antigen.brillmindz.org";
-    public static final String BASE_URL = "http://antigenapp.com";
+    public static final String BASE_URL = "https://dl.dropboxusercontent.com";
     private static Retrofit retrofit = null;
 
 

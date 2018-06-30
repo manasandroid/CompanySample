@@ -1,4 +1,4 @@
-package release.admin.com.companysampleproject.list;
+package release.admin.com.companysampleproject.newslist;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -22,18 +22,18 @@ public class NewsListRecyclerAdapter extends
             NewsListFragment newsListFragment) {
         this.mNewsModelList = newsModelList;
         this.mContext = context;
-        //this.mOnAdpterItemClickListner = newsListFragment;
+        this.mOnAdpterItemClickListner = newsListFragment;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent,
             int viewType) {
-        View messageItemView = LayoutInflater.from(parent.getContext()).inflate(
+        View newsItemView = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.test_list_row, parent, false);
         RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        messageItemView.setLayoutParams(lp);
-        return new ViewHolder(messageItemView);
+        newsItemView.setLayoutParams(lp);
+        return new ViewHolder(newsItemView);
     }
 
     @Override

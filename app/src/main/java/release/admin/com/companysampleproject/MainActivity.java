@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import release.admin.com.companysampleproject.list.NewsListContract;
-import release.admin.com.companysampleproject.list.NewsListFragment;
+import release.admin.com.companysampleproject.newslist.NewsListContract;
+import release.admin.com.companysampleproject.newslist.NewsListFragment;
 
-public class MainActivity extends AppCompatActivity implements NewsListContract.NewsView {
+public class MainActivity extends AppCompatActivity{
+
+    private NewsListContract.Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +28,4 @@ public class MainActivity extends AppCompatActivity implements NewsListContract.
         getSupportActionBar().setSubtitle("Member 1, Member 2, Member 3, Member 4");
     }
 
-    @Override
-    public void refreshList() {
-
-    }
 }
